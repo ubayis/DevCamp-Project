@@ -29,9 +29,13 @@ public class MovieAdapter  extends RecyclerView.Adapter<MovieAdapter.ViewHolder>
         viewHolder.judul.setText(getListMovie().get(i).getJudul());
         viewHolder.popularity.setText(getListMovie().get(i).getPopularity());
         viewHolder.voteAvg.setText(getListMovie().get(i).getVoteAvg());
+//        kalo request gambar harus tambah link nya lagi coba cek di alamat di bawah
+//        https://developers.themoviedb.org/3/getting-started/images
+
+        String url = "https://image.tmdb.org/t/p/w500";
         Glide.with(context)
-                .load(getListMovie().get(i).getImg())
-                .load(viewHolder.poster);
+                .load(url+getListMovie().get(i).getImg())// teknik menambahkan string dengan data yang ada url + data JSON jdnya url penuh
+                .into(viewHolder.poster);// into bukan load lagi,
 
     }
 
