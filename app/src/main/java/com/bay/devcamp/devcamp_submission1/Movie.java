@@ -91,18 +91,18 @@ public class Movie {
         try {
             String id = obj.getString("id");
             String judul = obj.getString("title");
-            String url = obj.getString("url");
-            String src_movie = obj.getString("src_movie");
+//            String url = obj.getString("url"); url gak ada di Json nya
+//            String src_movie = obj.getString("src_movie"); ini juga gak ada
             String vote_avg = obj.getString("vote_average");
             String gambar = obj.getString("poster_path");
-            String tanggal = obj.getString("tanggal");
+            String tanggal = obj.getString("release_date");// ini "release_date" bukan tanggal
             String popularity = obj.getString("popularity");
             String halaman = obj.getString("overview");
 
             this.id = id;
             this.judul = judul;
-            this.url = url;
-            this.srcMovie = src_movie;
+//            this.url = url;
+//            this.srcMovie = src_movie;
             this.voteAvg = vote_avg;
             this.img = gambar;
             this.date = tanggal;
